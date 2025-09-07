@@ -1,0 +1,23 @@
+{
+	"mongo_uri": "mongodb+srv://hr_1937:HR_%23%231783mD@hackodisha-humanity.nyrydnw.mongodb.net/?retryWrites=true&w=majority&appName=HackOdisha-Humanity",
+	"db_name": "communitydb",
+	"jwt_secret": "change-me",
+	"port": "8000",
+
+	"gemini_api_key": "",               
+	"elevenlabs_api_key": "",           
+
+	"chatbot_gemini_api_key": "",      
+	"chatbot_eleven_api_key": "",      
+	"chatbot_eleven_voice_id": "iWNf11sz1GrUE4ppxTOL",
+
+	"neighbour_gemini_api_key": "",    
+	"neighbour_eleven_api_key": "",    
+
+	"firestore_project_id": "",
+	"google_application_credentials": "", 
+
+	"cloudinary_cloud": "",
+	"cloudinary_api_key": "",
+	"cloudinary_api_secret": ""
+}

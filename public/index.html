@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Care Network - Connecting Hearts, Sharing Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>जुड़ रहे हैं... Connecting...</p>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-heart"></i>
+                <span>Community Care</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <button class="nav-btn" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Login</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="homepage" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hindi">समुदाय की देखभाल</span>
+                    <span class="english">Community Care Network</span>
+                </h1>
+                <p class="hero-subtitle">Reviving Human Connection Through Traditional Wisdom</p>
+                <div class="hero-description">
+                    <p>🏠 Connect with neighbors instantly for help</p>
+                    <p>🌿 Share and discover traditional remedies</p>
+                    <p>👴 Preserve elder wisdom for future generations</p>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="getStartedBtn">
+                        <i class="fas fa-rocket"></i>
+                        Get Started
+                    </button>
+                    <button class="btn btn-secondary" id="learnMoreBtn">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
+                    <button class="btn" id="neighbourHelpBtn">
+                        <i class="fas fa-hands-helping"></i>
+                        Get help from neighbours
+                    </button>
+                    <button class="btn" id="chatbotBtn">
+                        <i class="fas fa-robot"></i>
+                        Ask chatbot
+                    </button>
+                    <input id="chatbotAudioInput" type="file" accept="audio/*" capture style="display:none" />
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="community-illustration">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem-solution">
+            <div class="container">
+                <div class="section-grid">
+                    <div class="problem-card">
+                        <div class="card-icon">💔</div>
+                        <h3>The Problem</h3>
+                        <p>Communities are dying from disconnection. Elderly sit alone with lifetimes of traditional remedies while young people suffer from ailments that simple desi treatments could cure.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="card-icon">✨</div>
+                        <h3>Our Solution</h3>
+                        <p>Hyperlocal platform rebuilding community through instant neighbor help, traditional remedy sharing, and elder wisdom preservation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">How We're Building Community</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🆘</div>
+                        <h3>Neighbor Help System</h3>
+                        <p>Instant help requests and notifications to connect neighbors in need</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌿</div>
+                        <h3>Desi Remedy Hub</h3>
+                        <p>Share and discover traditional remedies validated by community elders</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Wisdom Exchange</h3>
+                        <p>Preserve precious elder stories and life lessons for future generations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎁</div>
+                        <h3>Community Rewards</h3>
+                        <p>Points system recognizing helpful community members</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="authTitle">Welcome Back</h2>
+                <button class="close-btn" id="closeAuth">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button class="btn btn-primary btn-full" id="loginSubmit">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+                <p class="auth-switch">
+                    New to Community Care? 
+                    <a href="#" id="showSignup">Create Account</a>
+                </p>
+            </div>
+            <div id="signupForm" class="auth-form">
+                <div class="form-group">
+                    <label for="signupName">
+                        <i class="fas fa-user"></i>
+                        Full Name
+                    </label>
+                    <input type="text" id="signupName" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                </div>
+                <button class="btn btn-primary btn-full" id="signupSubmit">
+                    <i class="fas fa-user-plus"></i>
+                    Create Account
+                </button>
+                <p class="auth-switch">
+                    Already have an account? 
+                    <a href="#" id="showLogin">Login</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainApp" class="page">
+        <div class="app-nav">
+            <div class="app-nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-heart"></i>
+                    <span>Community Care</span>
+                </div>
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-tab="feed">
+                        <i class="fas fa-home"></i>
+                        <span>Feed</span>
+                    </button>
+                    <button class="nav-tab" data-tab="upload">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="nav-tab" data-tab="profile">
+                        <i class="fas fa-user"></i>
+                        <span>Profile</span>
+                    </button>
+                </div>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="feedTab" class="tab-content active">
+            <div class="feed-header">
+                <h2>Community Feed</h2>
+                <div class="feed-filters">
+                    <button class="filter-btn active" data-section="all">All</button>
+                    <button class="filter-btn" data-section="remedies">🌿 Remedies</button>
+                    <button class="filter-btn" data-section="experience">📖 Experience</button>
+                </div>
+            </div>
+            <div id="feedContainer" class="feed-container">
+                </div>
+        </div>
+
+        <div id="uploadTab" class="tab-content">
+            <div class="upload-container">
+                <h2>Share with Community</h2>
+                <div class="section-selector">
+                    <label>
+                        <input type="radio" name="section" value="remedies" checked>
+                        <div class="section-option">
+                            <i class="fas fa-leaf"></i>
+                            <span>Remedies</span>
+                            <small>Share traditional treatments</small>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="section" value="experience">
+                        <div class="section-option">
+                            <i class="fas fa-book"></i>
+                            <span>Experience</span>
+                            <small>Share life stories</small>
+                        </div>
+                    </label>
+                </div>
+                <div class="upload-form">
+                    <div class="form-group">
+                        <label for="uploadCaption">
+                            <i class="fas fa-pen"></i>
+                            Caption / Description
+                        </label>
+                        <textarea id="uploadCaption" placeholder="Share your story, remedy, or experience..." maxlength="500"></textarea>
+                        <small class="char-count">0/500 characters</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="uploadFile">
+                            <i class="fas fa-upload"></i>
+                            Add Media (Optional)
+                        </label>
+                        <div class="file-upload-area" id="fileUploadArea">
+                            <input type="file" id="uploadFile" accept="image/*,video/*,audio/*">
+                            <div class="upload-placeholder">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload or drag & drop</p>
+                                <small>Images, Videos (max 2min), Audio (max 2min)</small>
+                            </div>
+                        </div>
+                        <div id="filePreview" class="file-preview"></div>
+                    </div>
+                    <button class="btn btn-primary btn-full" id="uploadSubmit">
+                        <i class="fas fa-share"></i>
+                        Share with Community
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="profileTab" class="tab-content">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profileAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="profileName">Loading...</h2>
+                        <p id="profileEmail">Loading...</p>
+                        <button class="btn btn-secondary" id="editProfileBtn">
+                            <i class="fas fa-edit"></i>
+                            Edit Profile
+                        </button>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="remediesCount">0</span>
+                        <span class="stat-label">Remedies Shared</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="experienceCount">0</span>
+                        <span class="stat-label">Experiences Shared</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="helpCount">0</span>
+                        <span class="stat-label">People Helped</span>
+                    </div>
+                </div>
+                <div class="profile-sections">
+                    <div class="section-tabs">
+                        <button class="section-tab active" data-section="remedies">My Remedies</button>
+                        <button class="section-tab" data-section="experience">My Experiences</button>
+                    </div>
+                    <div id="profilePosts" class="profile-posts">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toastContainer" class="toast-container"></div>
+    <script src="app.js"></script>
+</body>
+</html>
